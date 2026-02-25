@@ -174,3 +174,11 @@ main {
 #submit-btn:active {
     transform: scale(0.98);
 }
+
+#comments-section {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
