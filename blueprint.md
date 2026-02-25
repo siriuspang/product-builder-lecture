@@ -12,14 +12,14 @@ This project is a simple web application that generates and displays a set of ra
 - **Web Components:** The application uses a custom element (`lotto-numbers`) to encapsulate the display of the lottery numbers, making the code more modular and reusable.
 - **Responsive Design:** The layout adapts to different screen sizes, ensuring a good user experience on both desktop and mobile devices.
 - **Dark & Light Mode:** Users can toggle between dark and light themes, with their preference persisted in local storage.
+- **Partnership Inquiry Form:** A simple form for users to submit partnership inquiries.
 
 ## Current Plan
 
-- **Implement Theme Toggle:**
-    - Update CSS to use variables for colors.
-    - Define light and dark color schemes.
-    - Add a theme toggle button to the HTML.
-    - Add JavaScript logic to handle theme switching and persistence.
+- **Implement Partnership Inquiry Form:**
+    - Add a form section to `index.html`.
+    - Style the form in `style.css` with theme support.
+    - Add form submission handling in `main.js`.
 - **Deployment:**
     - Verify the application is working as expected.
     - Commit and push the changes to the repository.

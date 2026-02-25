@@ -50,4 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial generation
     const initialNumbers = generateLottoNumbers();
     displayNumbers(initialNumbers);
+
+    // Partnership Form Logic
+    const partnershipForm = document.getElementById('partnership-form');
+    if (partnershipForm) {
+        partnershipForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(partnershipForm);
+            const data = Object.fromEntries(formData.entries());
+            
+            console.log('Partnership Inquiry:', data);
+            alert('제휴 문의가 접수되었습니다. 감사합니다!');
+            partnershipForm.reset();
+        });
+    }
 });
