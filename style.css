@@ -1,23 +1,51 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --header-color: #1877f2;
+    --card-bg: #fff;
+    --card-border: #1877f2;
+    --button-bg: #1877f2;
+    --button-hover: #166fe5;
+    --button-text: #fff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #18191a;
+    --text-color: #e4e6eb;
+    --header-color: #2d88ff;
+    --card-bg: #242526;
+    --card-border: #3a3b3c;
+    --button-bg: #2d88ff;
+    --button-hover: #1b74e4;
+    --button-text: #fff;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     font-size: 2.5rem;
-    color: #1877f2;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: var(--header-color);
+    text-shadow: 1px 1px 2px var(--shadow);
 }
 
 main {
@@ -36,30 +64,41 @@ main {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #1877f2;
+    background-color: var(--card-bg);
+    border: 2px solid var(--card-border);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #1877f2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--header-color);
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 #generate-btn {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    color: #fff;
-    background-color: #1877f2;
+    color: var(--button-text);
+    background-color: var(--button-bg);
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--shadow);
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 #generate-btn:hover {
-    background-color: #166fe5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--button-hover);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+#theme-toggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
 }
